@@ -38,7 +38,7 @@ public final class AxPluginParser {
         DependencyManager manager = new DependencyManager(folder, URLClassLoaderWrapper.wrap((URLClassLoader) AxAPIBootstrapper.class.getClassLoader()));
         manager.repository(Repository.mavenCentral());
         manager.repository(Repository.maven("https://repo.artillex-studios.com/releases/"));
-        manager.dependency(new Dependency("com{}artillexstudios{}axapi".replace("{}", "."), "axapi", axAPIVersion));
+        manager.dependency(new Dependency("com{}artillexstudios{}axapi".replace("{}", "."), "axapi", axAPIVersion, "all"));
         manager.relocate(new Relocation("com{}artillexstudios{}axapi".replace("{}", "."), axAPIRelocation));
 
         repositories.forEach(manager::repository);
