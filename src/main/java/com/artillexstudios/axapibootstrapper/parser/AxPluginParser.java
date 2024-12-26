@@ -35,6 +35,7 @@ public final class AxPluginParser {
 
     public static void loadDependencies() {
         File folder = new File(ClassLoaderReader.getDataFolder(AxAPIBootstrapper.class), librariesFolder);
+        logger.info("Classloader of the class: {}", AxAPIBootstrapper.class.getClassLoader().getClass());
         DependencyManager manager = new DependencyManager(folder, URLClassLoaderWrapper.wrap((URLClassLoader) AxAPIBootstrapper.class.getClassLoader()));
         manager.repository(Repository.mavenCentral());
         manager.repository(Repository.maven("https://repo.artillex-studios.com/releases/"));
