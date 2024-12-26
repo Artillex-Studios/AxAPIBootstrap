@@ -41,7 +41,7 @@ public final class AxPluginWrapper {
 
     public void onLoad() {
         try {
-            this.onLoad.invoke();
+            this.onLoad.invoke(this.instance);
         } catch (Throwable exception) {
             logger.error("Failed to call onLoad!", exception);
         }
@@ -49,7 +49,7 @@ public final class AxPluginWrapper {
 
     public void onEnable() {
         try {
-            this.onEnable.invoke();
+            this.onEnable.invoke(this.instance);
         } catch (Throwable exception) {
             logger.error("Failed to call onEnable!", exception);
         }
@@ -57,7 +57,7 @@ public final class AxPluginWrapper {
 
     public void onDisable() {
         try {
-            this.onDisable.invoke();
+            this.onDisable.invoke(this.instance);
         } catch (Throwable exception) {
             logger.error("Failed to call onDisable!", exception);
         }
