@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.artillexstudios.axapibootstrapper"
-version = "1.0.5"
+version = "1.0.6"
 
 repositories {
     mavenCentral()
@@ -17,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.revxrsal:zapper.api:1.0.3")
+    implementation("io.github.revxrsal:zapper.api:1.0.5")
     compileOnly("org.spigotmc:spigot-api:1.21-R0.1-SNAPSHOT")
     compileOnly("org.slf4j:slf4j-api:2.0.9")
 }
